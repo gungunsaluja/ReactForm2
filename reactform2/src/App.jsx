@@ -42,7 +42,7 @@ function App() {
           id="firstName"
           placeholder="love"
           value={formData.firstName}
-          onChnage={changeHandler}
+          onChange={changeHandler}
           className="outline"
         ></input>
         <br></br>
