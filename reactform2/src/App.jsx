@@ -1,6 +1,5 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+
 import "./App.css";
 
 function App() {
@@ -29,7 +28,9 @@ function App() {
   function submitHandler(event) {
     event.preventDefault();
     console.log("Finally printing the value of the form");
+    console.log(formData);
   }
+
 
   return (
     <div className="flex flex-col items-center mt-2">
@@ -67,6 +68,7 @@ function App() {
           onChange={changeHandler}
           className="outline"
         ></input>
+        <br></br>
         <label htmlFor="country">Contry</label>
         <br></br>
         <select
@@ -118,7 +120,7 @@ function App() {
           className="outline"
         ></input>
         <br></br>
-        <label htmlFor="postalCode">State/Province</label>
+        <label htmlFor="postalCode">Postal Code</label>
         <br></br>
         <input
           type="text"
@@ -129,6 +131,8 @@ function App() {
           onChange={changeHandler}
           className="outline"
         ></input>
+        <br></br>
+        {/* bhoot sare input tags ko grouping karne ke liye fieldset ka use karte hai */}
         <fieldset>
           <legend>By Email</legend>
           <div className="flex">
@@ -136,7 +140,7 @@ function App() {
               id="comments"
               name="comments"
               type="checkbox"
-              value={formData.comments}
+              checked={formData.comments}
               onChange={changeHandler}
             ></input>
 
@@ -172,6 +176,7 @@ function App() {
             </div>
           </div>
         </fieldset>
+        <br></br>
         <fieldset>
           <legend>Push Notifications</legend>
           <p>These are delivered via SMS to your mobile phone.</p>
@@ -191,8 +196,9 @@ function App() {
             value="Same as email"
             onChange={changeHandler}
           />
-          <br></br>
+        
           <label htmlFor="pushEmail">Same as email</label>
+          <br></br>
           <input
             type="radio"
             id="pushNothing"
@@ -202,7 +208,7 @@ function App() {
           />
           <label htmlFor="pushNothing">No Push Notifications</label>
         </fieldset>
-        <button className="bg-blue text-white font-bold rounded">Save</button>
+        <button className="bg-blue-600 text-white font-bold rounded py-2 px-4">Save</button>
       </form>
     </div>
   );
