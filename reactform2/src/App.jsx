@@ -106,7 +106,7 @@ function App() {
           className="outline"
         ></input>
         <br></br>
-        <label htmlFor="state">State/Province</label>
+        <label htmlFor="state">State / Province</label>
         <br></br>
         <input
           type="text"
@@ -117,6 +117,7 @@ function App() {
           onChange={changeHandler}
           className="outline"
         ></input>
+        <br></br>
         <label htmlFor="postalCode">State/Province</label>
         <br></br>
         <input
