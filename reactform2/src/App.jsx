@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import "./App.css";
+// react me nyii state ko save b kar re hote hai or purani state koupdate brkhte h
 
 function App() {
   const [formData, setFormData] = useState({
@@ -133,6 +134,7 @@ function App() {
           className="outline"
         ></input>
         <br></br>
+        {/*  */}
         {/* bhoot sare input tags ko grouping karne ke liye fieldset ka use karte hai */}
         <fieldset>
           <legend>By Email</legend>
