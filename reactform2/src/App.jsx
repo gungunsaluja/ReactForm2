@@ -46,6 +46,7 @@ function App() {
           onChange={changeHandler}
           className="outline"
         ></input>
+        {/* outline se input field par outline aati hai */}
         <br></br>
         <label htmlFor="lastName">Last name</label>
         <input
